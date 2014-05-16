@@ -1,0 +1,48 @@
+{
+  "name": "display-notification",
+  "version": "0.0.0",
+  "description": "Display a notification (OS X 10.9+)",
+  "license": "MIT",
+  "bin": {
+    "display-notification": "cli.js"
+  },
+  "repository": "sindresorhus/display-notification",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli",
+    "bin",
+    "osx",
+    "mac",
+    "applescript",
+    "display",
+    "notification",
+    "center",
+    "notify",
+    "notifier"
+  ],
+  "dependencies": {
+    "escape-string-applescript": "^0.1.0",
+    "get-stdin": "^0.1.0",
+    "minimist": "^0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
