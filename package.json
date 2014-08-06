@@ -19,7 +19,7 @@
     "darwin"
   ],
   "scripts": {
-    "test": "mocha"
+    "test": "node test.js"
   },
   "files": [
     "index.js",
@@ -38,11 +38,11 @@
     "notifier"
   ],
   "dependencies": {
-    "escape-string-applescript": "^0.1.0",
-    "get-stdin": "^0.1.0",
-    "minimist": "^0.1.0"
+    "escape-string-applescript": "^1.0.0",
+    "get-stdin": "^1.0.0",
+    "minimist": "^0.2.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "ava": "0.0.3"
   }
 }

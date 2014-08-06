@@ -58,12 +58,12 @@ $ npm install --global display-notification
 ```sh
 $ display-notification --help
 
-Usage
-  $ display-notification <text> [--title <>] [--subtitle <>] [--sound <>]
-  $ echo <text> | display-notification [--title <>] [--subtitle <>] [--sound <>]
+  Usage
+    display-notification <text> [--title <>] [--subtitle <>] [--sound <>]
+    echo <text> | display-notification [--title <>] [--subtitle <>] [--sound <>]
 
-Example
-  $ display-notification 'I love unicorns' --title 'Unicorns'
+  Example
+    display-notification 'I love unicorns' --title 'Unicorns'
 ```
 
 

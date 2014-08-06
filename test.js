@@ -1,15 +1,16 @@
 'use strict';
-var assert = require('assert');
-var displayNotification = require('./index');
+var test = require('ava');
+var displayNotification = require('./');
 
-it('should display a notification', function (cb) {
+test('display a notification', function (t) {
+	t.plan(1);
+
 	displayNotification({
 		title: 'title',
 		subtitle: 'subtitle',
 		text: 'text',
 		sound: 'Bottle'
 	}, function (err) {
-		assert(!err, err);
-		cb();
+		t.assert(!err, err);
 	});
 });

@@ -15,5 +15,7 @@ module.exports = function (opts, cb) {
 		script += ' sound name "' + escapeString(opts.sound) + '"';
 	}
 
-	execFile('osascript', ['-e', script], function (err) { cb(err); });
+	execFile('osascript', ['-e', script], function (err) {
+		cb(err);
+	});
 };
