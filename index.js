@@ -1,6 +1,6 @@
 'use strict';
-var execFile = require('child_process').execFile;
 var escapeString = require('escape-string-applescript');
+var runApplescript = require('run-applescript');
 
 module.exports = function (opts, cb) {
 	if (!opts.title && !opts.text) {
@@ -15,7 +15,7 @@ module.exports = function (opts, cb) {
 		script += ' sound name "' + escapeString(opts.sound) + '"';
 	}
 
-	execFile('osascript', ['-e', script], function (err) {
+	runApplescript(script, function (err) {
 		cb(err);
 	});
 };
