@@ -3,15 +3,13 @@
   "version": "1.0.2",
   "description": "Display a notification (OS X 10.9+)",
   "license": "MIT",
-  "bin": {
-    "display-notification": "cli.js"
-  },
   "repository": "sindresorhus/display-notification",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
+  "bin": "cli.js",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -26,8 +24,8 @@
     "cli.js"
   ],
   "keywords": [
+    "cli-app",
     "cli",
-    "bin",
     "osx",
     "mac",
     "applescript",
