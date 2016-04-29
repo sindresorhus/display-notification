@@ -7,7 +7,7 @@
 
 ## Install
 
-```sh
+```
 $ npm install --save display-notification
 ```
 
@@ -15,7 +15,7 @@ $ npm install --save display-notification
 ## Usage
 
 ```js
-var displayNotification = require('display-notification');
+const displayNotification = require('display-notification');
 
 displayNotification({
 	title: 'Unicorns',
@@ -28,45 +28,40 @@ displayNotification({
 
 ## API
 
-### displayNotification(options, callback)
+### displayNotification(options)
 
-Everything is a string and optional, except you need to supply at least a `title` or `text`.
-
-The icon cannot be changed.
+Returns a promise.
 
 #### options
 
+Everything is a string and optional, except you need to supply at least a `title` or `text`.
+
 ##### title
+
+Type: `string`
+
+Title of the notification.
 
 ##### subtitle
 
+Type: `string`
+
+Subtitle of the notification.
+
 ##### text
+
+Type: `string`
+
+Content of the notification.
 
 ##### sound
 
-The name of a sound located in `~/Library/Sounds` or `/System/Library/Sounds`:
+Type: `string`<br>
+Options: `Basso` `Blow` `Bottle` `Frog` `Funk` `Glass` `Hero` `Morse` `Ping` `Pop` `Purr` `Sosumi` `Submarine` `Tink`
 
-`Basso` `Blow` `Bottle` `Frog` `Funk` `Glass` `Hero` `Morse` `Ping` `Pop` `Purr` `Sosumi` `Submarine` `Tink`
-
-
-## CLI
-
-```sh
-$ npm install --global display-notification
-```
-
-```sh
-$ display-notification --help
-
-  Usage
-    display-notification <text> [--title <>] [--subtitle <>] [--sound <>]
-    echo <text> | display-notification [--title <>] [--subtitle <>] [--sound <>]
-
-  Example
-    display-notification 'I love unicorns' --title 'Unicorns'
-```
+Name of the sound located in `~/Library/Sounds` or `/System/Library/Sounds`:
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
