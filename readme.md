@@ -34,7 +34,7 @@ Returns a promise.
 
 #### options
 
-Everything is a string and optional, except you need to supply at least a `title` or `text`.
+Specify at least a `title` or `text`.
 
 ##### title
 
@@ -57,7 +57,7 @@ Content of the notification.
 ##### sound
 
 Type: `string`<br>
-Options: `Basso` `Blow` `Bottle` `Frog` `Funk` `Glass` `Hero` `Morse` `Ping` `Pop` `Purr` `Sosumi` `Submarine` `Tink`
+Values: `Basso` `Blow` `Bottle` `Frog` `Funk` `Glass` `Hero` `Morse` `Ping` `Pop` `Purr` `Sosumi` `Submarine` `Tink`
 
 Name of the sound located in `~/Library/Sounds` or `/System/Library/Sounds`:
 

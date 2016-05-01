@@ -12,9 +12,6 @@
   "engines": {
     "node": ">=4"
   },
-  "os": [
-    "darwin"
-  ],
   "scripts": {
     "test": "xo && ava"
   },
@@ -22,13 +19,14 @@
     "index.js"
   ],
   "keywords": [
+    "display",
+    "notification",
+    "notify",
+    "show",
     "osx",
     "mac",
     "applescript",
-    "display",
-    "notification",
     "center",
-    "notify",
     "notifier"
   ],
   "dependencies": {

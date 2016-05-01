@@ -3,6 +3,10 @@ const escapeString = require('escape-string-applescript');
 const runApplescript = require('run-applescript');
 
 module.exports = opts => {
+	if (process.platform !== 'darwin') {
+		return Promise.reject(new Error('OS X only'));
+	}
+
 	if (!opts || !opts.title && !opts.text) {
 		return Promise.reject(new Error('`title` or `text` required'));
 	}
