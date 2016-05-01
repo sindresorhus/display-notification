@@ -1,16 +1,16 @@
-'use strict';
-var test = require('ava');
-var displayNotification = require('./');
+import test from 'ava';
+import m from './';
 
-test('display a notification', function (t) {
-	t.plan(1);
+test('error', t => {
+	t.throws(m(), '`title` or `text` required');
+	t.throws(m({subtitle: 'foo'}), '`title` or `text` required');
+});
 
-	displayNotification({
+test('display notification', t => {
+	t.notThrows(m({
 		title: 'title',
 		subtitle: 'subtitle',
 		text: 'text',
 		sound: 'Bottle'
-	}, function (err) {
-		t.assert(!err, err);
-	});
+	}));
 });

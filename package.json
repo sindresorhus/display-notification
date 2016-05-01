@@ -9,23 +9,19 @@
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
-  "bin": "cli.js",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "os": [
     "darwin"
   ],
   "scripts": {
-    "test": "node test.js"
+    "test": "xo && ava"
   },
   "files": [
-    "index.js",
-    "cli.js"
+    "index.js"
   ],
   "keywords": [
-    "cli-app",
-    "cli",
     "osx",
     "mac",
     "applescript",
@@ -37,11 +33,13 @@
   ],
   "dependencies": {
     "escape-string-applescript": "^1.0.0",
-    "get-stdin": "^4.0.1",
-    "minimist": "^1.1.0",
-    "run-applescript": "^1.0.0"
+    "run-applescript": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "0.0.4"
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }
