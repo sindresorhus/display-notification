@@ -4,7 +4,7 @@ const runApplescript = require('run-applescript');
 
 module.exports = opts => {
 	if (process.platform !== 'darwin') {
-		return Promise.reject(new Error('OS X only'));
+		return Promise.reject(new Error('macOS only'));
 	}
 
 	if (!opts || !opts.title && !opts.text) {
