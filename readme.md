@@ -1,4 +1,4 @@
-# display-notification [![Build Status](https://travis-ci.org/sindresorhus/display-notification.svg?branch=master)](https://travis-ci.org/sindresorhus/display-notification)
+# display-notification
 
 > Display a notification *(macOS 10.9+)*
 
