@@ -1,16 +1,25 @@
 import test from 'ava';
-import m from './';
+import displayNotification from './index.js';
 
-test('error', t => {
-	t.throws(m(), '`title` or `text` required');
-	t.throws(m({subtitle: 'foo'}), '`title` or `text` required');
+test('error', async t => {
+	await t.throwsAsync(
+		displayNotification(),
+		{message: '`title` or `text` required'}
+	);
+
+	await t.throwsAsync(
+		displayNotification({subtitle: 'foo'}),
+		{message: '`title` or `text` required'}
+	);
 });
 
-test('display notification', t => {
-	t.notThrows(m({
-		title: 'title',
-		subtitle: 'subtitle',
-		text: 'text',
-		sound: 'Bottle'
-	}));
+test('display notification', async t => {
+	await t.notThrowsAsync(
+		displayNotification({
+			title: 'title',
+			subtitle: 'subtitle',
+			text: 'text',
+			sound: 'Bottle'
+		})
+	);
 });

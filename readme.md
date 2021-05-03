@@ -4,20 +4,18 @@
 
 ![](screenshot.png)
 
-
 ## Install
 
 ```
-$ npm install --save display-notification
+$ npm install display-notification
 ```
-
 
 ## Usage
 
 ```js
-const displayNotification = require('display-notification');
+import displayNotification from 'display-notification';
 
-displayNotification({
+await displayNotification({
 	title: 'Unicorns',
 	subtitle: 'Rainbows',
 	text: 'Cake',
@@ -25,12 +23,11 @@ displayNotification({
 });
 ```
 
-
 ## API
 
 ### displayNotification(options)
 
-Returns a promise.
+Returns a promise that resolves when the notification is shown.
 
 #### options
 
@@ -56,12 +53,7 @@ Content of the notification.
 
 ##### sound
 
-Type: `string`<br>
+Type: `string`\
 Values: `Basso` `Blow` `Bottle` `Frog` `Funk` `Glass` `Hero` `Morse` `Ping` `Pop` `Purr` `Sosumi` `Submarine` `Tink`
 
 Name of the sound located in `~/Library/Sounds` or `/System/Library/Sounds`:
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

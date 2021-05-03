@@ -1,21 +1,20 @@
-'use strict';
-const escapeString = require('escape-string-applescript');
-const runApplescript = require('run-applescript');
+import {runAppleScriptAsync} from 'run-applescript';
+import escapeString from 'escape-string-applescript';
 
-module.exports = opts => {
+export default async function displayNotification({title = '', text = '', subtitle = '', sound} = {}) {
 	if (process.platform !== 'darwin') {
-		return Promise.reject(new Error('macOS only'));
+		throw new Error('macOS only');
 	}
 
-	if (!opts || !opts.title && !opts.text) {
-		return Promise.reject(new Error('`title` or `text` required'));
+	if (!title && !text) {
+		throw new Error('`title` or `text` required');
 	}
 
-	let script = `display notification "${escapeString(opts.text || '')}" with title "${escapeString(opts.title || '')}" subtitle "${escapeString(opts.subtitle || '')}"`;
+	let script = `display notification "${escapeString(text)}" with title "${escapeString(title)}" subtitle "${escapeString(subtitle)}"`;
 
-	if (typeof opts.sound === 'string') {
-		script += ` sound name "${escapeString(opts.sound)}"`;
+	if (typeof sound === 'string') {
+		script += ` sound name "${escapeString(sound)}"`;
 	}
 
-	return runApplescript(script);
-};
+	await runAppleScriptAsync(script);
+}
