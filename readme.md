@@ -6,8 +6,8 @@
 
 ## Install
 
-```
-$ npm install display-notification
+```sh
+npm install display-notification
 ```
 
 ## Usage
